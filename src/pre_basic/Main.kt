@@ -12,7 +12,11 @@ fun main() {
 
     // 0으로 나누기 테스트
     println("\n=== 0으로 나누기 ===")
-    println("10 / 0 = ${calculator.div(10, 0)}")
+    try {
+        println("10 / 0 = ${calculator.div(10, 0)}")
+    } catch (e: IllegalArgumentException) {
+        println("에러: ${e.message}")
+    }
 
     // 연산 기록 출력
     println("\n=== 연산 기록 ===")
